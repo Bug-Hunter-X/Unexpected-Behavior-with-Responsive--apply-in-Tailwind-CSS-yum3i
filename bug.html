@@ -1,0 +1,9 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with a responsive modifier.  For example, applying a class conditionally based on screen size might lead to unexpected behavior if the modifier is not correctly scoped.
+
+```html
+<div class="md:\@apply bg-red-500">
+  <!-- This won't work as expected -->
+</div>
+```
+
+The `\@apply` directive escapes the `@apply` in this case but may not always work as intended across different Tailwind CSS versions or configurations, leading to the class not being applied correctly.
