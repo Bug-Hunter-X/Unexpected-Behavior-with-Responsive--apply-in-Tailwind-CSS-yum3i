@@ -1,0 +1,9 @@
+The solution is to avoid using `@apply` with responsive modifiers directly. Instead, use standard Tailwind classes along with the responsive modifiers.
+
+```html
+<div class="md:bg-red-500">
+  <!-- This will work as expected -->
+</div>
+```
+
+This approach leverages Tailwind's built-in responsive modifiers to apply the `bg-red-500` class only on screens that meet the `md` breakpoint (medium screens and above).  This ensures clean, consistent application of styles without the complexities and potential inconsistencies of `@apply` in responsive contexts.
